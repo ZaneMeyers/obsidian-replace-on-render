@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "obsidian-replace-on-render",
+	"name": "Replace on Render",
 	"version": "1.0.0",
-	"minAppVersion": "1.0.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"minAppVersion": "0.15.0",
+	"description": "Write text replacement rules for Live Preview and Reading Views.",
+	"author": "Zane Meyers",
+	"authorUrl": "https://github.com/ZaneMeyers",
 	"isDesktopOnly": false
 }
