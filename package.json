@@ -1,6 +1,6 @@
 {
 	"name": "replace-on-render",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Apply render-time regex text substitutions in Reading view and Live Preview without changing your notes.",
 	"main": "main.js",
 	"type": "module",
