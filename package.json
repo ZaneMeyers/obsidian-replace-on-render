@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
-	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"name": "obsidian-replace-on-render",
+	"version": "2.0.0",
+	"description": "Render-time text substitutions for Obsidian Reading view and Live Preview.",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
@@ -13,6 +13,9 @@
 	"keywords": [],
 	"license": "0-BSD",
 	"devDependencies": {
+		"@codemirror/language": "^6.13.1",
+		"@codemirror/state": "^6.7.6",
+		"@codemirror/view": "^6.38.6",
 		"@eslint/js": "^9.39.4",
 		"@types/node": "^22.15.17",
 		"esbuild": "0.25.5",

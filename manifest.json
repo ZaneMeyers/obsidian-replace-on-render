@@ -1,9 +1,9 @@
 {
 	"id": "obsidian-replace-on-render",
 	"name": "Replace on Render",
-	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Write text replacement rules for Live Preview and Reading Views.",
+	"version": "2.0.0",
+	"minAppVersion": "1.2.3",
+	"description": "Render-time regex text substitutions (like AsciiDoc replacements) in Reading view and Live Preview, without changing your notes.",
 	"author": "Zane Meyers",
 	"authorUrl": "https://github.com/ZaneMeyers",
 	"isDesktopOnly": false

@@ -1,15 +1,34 @@
 /*
+ * Spans created by Replace on Render:
+ *   .ror-match     every match, in every view
+ *   .ror-replaced  the span shows the replacement text
+ *   .ror-raw       the span shows the original source text
+ *                  (Source mode, cursor on the match, or substitution off)
+ *   plus any classes set on the rule (defaults: .ror-em-dash, .ror-en-dash)
+ * Each span also has data-ror-source="<original text>".
+ *
+ * Nothing is styled by default. Example snippet:
+ *   .ror-replaced { color: var(--text-accent); }
+ */
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+/* Settings tab */
+.ror-rule-setting .setting-item-control {
+	flex-wrap: wrap;
+}
 
-If your plugin does not need CSS, delete this file.
+.ror-rule-setting .setting-item-control input[type='text'] {
+	min-width: 0;
+	width: 9em;
+}
 
-*/
+.ror-rule-setting .ror-pattern-input {
+	font-family: var(--font-monospace);
+}
 
-.ror-replacement {
-    color: inherit;
-    text-decoration: inherit;
-    background: transparent;
-    pointer-events: none;
+.ror-rule-setting input.ror-invalid {
+	border-color: var(--text-error);
+}
+
+.ror-rule-error {
+	color: var(--text-error);
 }
