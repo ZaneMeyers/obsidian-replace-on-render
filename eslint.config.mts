@@ -1,4 +1,5 @@
 import obsidianmd from 'eslint-plugin-obsidianmd';
+import { DEFAULT_BRANDS } from 'eslint-plugin-obsidianmd/dist/lib/rules/ui/brands.js';
 import globals from 'globals';
 import { globalIgnores, defineConfig } from 'eslint/config';
 
@@ -29,4 +30,14 @@ export default defineConfig(
 		},
 	},
 	...obsidianmd.configs.recommended,
+	{
+		// Obsidian's view names are proper nouns in this plugin's UI text.
+		// `brands` replaces the default list, so extend it rather than override.
+		rules: {
+			'obsidianmd/ui/sentence-case': [
+				'warn',
+				{ brands: [...DEFAULT_BRANDS, 'Reading View', 'Live Preview'] },
+			],
+		},
+	},
 );

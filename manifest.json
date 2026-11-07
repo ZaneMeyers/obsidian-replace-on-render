@@ -1,5 +1,5 @@
 {
-	"id": "obsidian-replace-on-render",
+	"id": "replace-on-render",
 	"name": "Replace on Render",
 	"version": "2.0.0",
 	"minAppVersion": "1.2.3",

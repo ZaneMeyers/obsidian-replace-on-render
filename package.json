@@ -1,5 +1,5 @@
 {
-	"name": "obsidian-replace-on-render",
+	"name": "replace-on-render",
 	"version": "2.0.0",
 	"description": "Render-time text substitutions for Obsidian Reading view and Live Preview.",
 	"main": "main.js",
