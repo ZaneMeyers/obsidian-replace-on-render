@@ -91,6 +91,32 @@ class ReplacementWidget extends WidgetType {
 	}
 }
 
+// CodeMirror's internal "side" values for non-inclusive ranges (Side.NonIncStart/NonIncEnd).
+const NON_INC_START = 500000000;
+const NON_INC_END = -600000000;
+
+/**
+ * Creates a replace decoration that link marks can wrap even when the match
+ * sits at the very start or end of the link text.
+ *
+ * CodeMirror wraps a replace widget in a mark only if, at equal positions, the
+ * mark opens before the widget and closes no earlier than it. It orders them by
+ * "side": a non-inclusive mark uses (NonIncStart, NonIncEnd), but
+ * Decoration.replace uses (NonIncStart - 1, NonIncEnd + 1), just outside the
+ * mark. So a match ending exactly where a link alias ends lost the link's
+ * styling and click-to-follow. Moving the sides to just inside the mark's fixes
+ * that. Sides only change behavior for block or empty decorations, and these
+ * are neither.
+ */
+function wrappableReplace(widget: WidgetType): Decoration {
+	const deco = Decoration.replace({ widget });
+	// Only adjust if CodeMirror still uses the values this relies on.
+	if (deco.startSide === NON_INC_START - 1 && deco.endSide === NON_INC_END + 1) {
+		Object.assign(deco, { startSide: NON_INC_START + 1, endSide: NON_INC_END });
+	}
+	return deco;
+}
+
 /** Splits [from, to) into the text segments not covered by excluded tokens, breaking at token boundaries. */
 function eligibleSegments(state: EditorState, from: number, to: number, opts: EditorOptions): [number, number][] {
 	const segments: [number, number][] = [];
@@ -159,7 +185,7 @@ function addMatch(
 	const to = offset + m.to;
 	if (replace && !touchesSelection(state, from, to)) {
 		const widget = new ReplacementWidget(m.text, m.source, spanClasses(m, true).join(' '));
-		builder.add(from, to, Decoration.replace({ widget }));
+		builder.add(from, to, wrappableReplace(widget));
 	} else {
 		builder.add(
 			from,
