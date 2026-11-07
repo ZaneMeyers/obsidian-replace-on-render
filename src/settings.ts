@@ -55,8 +55,8 @@ export function normalizeSettings(data: unknown): PluginSettings {
 const TOGGLES: { key: BooleanKey; name: string; desc: string }[] = [
 	{
 		key: 'readingView',
-		name: 'Enable in Reading View',
-		desc: 'Show replacements in Reading View. When off, matches are still wrapped in spans but keep their original text.',
+		name: 'Enable in Reading view',
+		desc: 'Show replacements in Reading view. When off, matches are still wrapped in spans but keep their original text.',
 	},
 	{
 		key: 'livePreview',
@@ -68,7 +68,7 @@ const TOGGLES: { key: BooleanKey; name: string; desc: string }[] = [
 const SKIP_COMMENTS = {
 	key: 'excludeComments' as const,
 	name: 'Skip comments',
-	desc: 'Leave %% Obsidian %% and <!-- HTML --> comments untouched. Comments are hidden in Reading View, so this only affects the editor.',
+	desc: 'Leave %% Obsidian %% and <!-- HTML --> comments untouched. Comments are hidden in Reading view, so this only affects the editor.',
 };
 
 function rulesHelp(): DocumentFragment {

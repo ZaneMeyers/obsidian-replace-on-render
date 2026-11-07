@@ -1,7 +1,7 @@
 # Replace on Render
 
 Render-time text replacement rules
-for Live Preview and Reading Views.
+for Live Preview and Reading view.
 Get the aesthetics of full-Unicode typography
 with pure, unambiguous ASCII source code.
 
@@ -36,13 +36,13 @@ Each rule is a JavaScript regular expression plus a replacement:
 ## Substitutions
 
 By default substitutions are enabled
-in Reading View and Live Preview.
+in Reading view and Live Preview.
 Toggles are provided for each of these.
 
 In Live Preview substitutions expand to their source when selected.
 
 Source mode always shows the original text.
-(Matches are still `<span>` wrapped per [[#Styling]].)
+(Matches are still `<span>` wrapped per [Styling](#styling).)
 
 Always skipped:
 inline code, code blocks, math, frontmatter, tags, HTML tags,

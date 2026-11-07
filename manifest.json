@@ -3,7 +3,7 @@
 	"name": "Replace on Render",
 	"version": "2.0.0",
 	"minAppVersion": "1.2.3",
-	"description": "Render-time regex text substitutions (like AsciiDoc replacements) in Reading view and Live Preview, without changing your notes.",
+	"description": "Apply render-time regex text substitutions in Reading view and Live Preview without changing your notes.",
 	"author": "Zane Meyers",
 	"authorUrl": "https://github.com/ZaneMeyers",
 	"isDesktopOnly": false

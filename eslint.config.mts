@@ -31,12 +31,12 @@ export default defineConfig(
 	},
 	...obsidianmd.configs.recommended,
 	{
-		// Obsidian's view names are proper nouns in this plugin's UI text.
+		// Obsidian capitalizes "Live Preview" as a proper noun in its own UI.
 		// `brands` replaces the default list, so extend it rather than override.
 		rules: {
 			'obsidianmd/ui/sentence-case': [
 				'warn',
-				{ brands: [...DEFAULT_BRANDS, 'Reading View', 'Live Preview'] },
+				{ brands: [...DEFAULT_BRANDS, 'Live Preview'] },
 			],
 		},
 	},
